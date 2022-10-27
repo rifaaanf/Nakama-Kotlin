@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/birthdate"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:hint="Tanggal Lahir"
+            android:paddingStart="2mm"
+            android:paddingLeft="10dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/asset1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="172dp"
+        android:layout_height="193dp"
+        android:src="@drawable/nakama_logo"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Selamat Datang di Nakama!"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Silahkan Daftarkan Diri Anda"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppinssemibold"
+            android:hint="Nama Lengkap"
+            android:imeOptions="actionDone"
+            android:paddingStart="2mm"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="30mm"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Daftar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

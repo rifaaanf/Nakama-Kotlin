@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".TableActivity"
+    android:stretchColumns="1">
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:src="@drawable/asset1" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="25mm"
+            android:layout_marginTop="2mm"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/vector" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30sp">
+
+        <TextView
+
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Konfirmasi Data Diri Anda!"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </TableRow>
+    <TableRow android:gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:text="Nama Lengkap  :"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/namaLengkap"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"/>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal"
+        android:layout_marginTop="15sp">
+        <TextView
+
+            android:text="Tanggal Lahir     :"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tglLahir"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"/>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal"
+        android:layout_marginTop="60dp">
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Konfirmasi"
+        />
+</TableRow>
+
+</TableLayout>
