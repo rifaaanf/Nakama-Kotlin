@@ -1,14 +1,14 @@
 package com.example.nakama
 
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.content.SharedPreferences
 import android.icu.text.SimpleDateFormat
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
-import android.widget.Button
+import android.view.Window
+import android.view.WindowManager
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -18,9 +18,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            val w: Window = window
+            w.setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            )
+        }
 
         val fullname = findViewById<EditText>(R.id.fullname)
         val birthdate = findViewById<EditText>(R.id.birthdate)
+        val tempat = findViewById<EditText>(R.id.tempat)
+
 
 
         val c = Calendar.getInstance()
@@ -35,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 val date = Date(mYear, monthOfYear, dayOfMonth - 1)
                 val dayString = simpleDateFormat.format(date) //returns true day name for current month only
 
-                birthdate.setText("$dayString, $dayOfMonth/${monthOfYear + 1}/$mYear")
+                birthdate.setText("$dayOfMonth/${monthOfYear + 1}/$mYear")
 
             }, year, month, day)
 
@@ -50,9 +59,11 @@ class MainActivity : AppCompatActivity() {
         btn_register.setOnClickListener{
             val nama = fullname.text.toString()
             val tglLahir = birthdate.text.toString()
+            val tempat = tempat.text.toString()
             val intent = Intent(this, TableActivity::class.java)
             intent.putExtra("nama", nama)
             intent.putExtra("tglLahir", tglLahir)
+            intent.putExtra("tempat", tempat)
             startActivity(intent);
         }
     }
